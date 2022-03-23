@@ -1,14 +1,5 @@
 ﻿class Program
 {
-  static void Main(string[] args)
-  {
-    // This is our employee-getting code now
-    List<string> employees = GetEmployees();
-    for (int i = 0; i < employees.Count; i++)
-    {
-      Console.WriteLine(employees[i]);
-    }
-  }
   static List<string> GetEmployees()
   {
     List<string> employees = new List<string>();
@@ -20,10 +11,20 @@
       {
         break;
       }
-
       employees.Add(input);
     }
-    // This is important!
     return employees;
+  }
+  static void PrintEmployees(List<string> employees)
+  {
+    for (int i = 0; i < employees.Count; i++)
+    {
+      Console.WriteLine(employees[i]);
+    }
+  }
+  static void Main(string[] args)
+  {
+    List<string> employees = GetEmployees();
+    PrintEmployees(employees);
   }
 }
