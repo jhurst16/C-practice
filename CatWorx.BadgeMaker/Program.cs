@@ -35,6 +35,9 @@
     {
       List<Employee> employees = GetEmployees();
       PrintEmployees(employees);
+
+      Util.PrintEmployees(employees);
+      Util.MakeCSV(employees);
     }
   }
 }
